@@ -18,18 +18,18 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET #show' do
-      before { get user_path(id: 1) }
+    before { get user_path(id: 1) }
 
-      it 'should have response status correct(ok)' do
-        expect(response).to have_http_status(:ok)
-      end
+    it 'should have response status correct(ok)' do
+      expect(response).to have_http_status(:ok)
+    end
 
-      it "renders 'show' template" do
-        expect(response).to render_template('show')
-      end
+    it "renders 'show' template" do
+      expect(response).to render_template('show')
+    end
 
-      it 'should include correct placeholder' do
-        expect(response.body).to include('See all posts')
-      end
+    it 'should include correct placeholder' do
+      expect(response.body).to include('See all posts')
+    end
   end
 end
