@@ -8,4 +8,3 @@ class Like < ApplicationRecord
     post.update(likes_counter: post.likes.size)
   end
 end
-

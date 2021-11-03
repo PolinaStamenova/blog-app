@@ -1,4 +1,4 @@
-require "pry"
+require 'pry'
 class UsersController < ApplicationController
   def index
     # @users = User.all
