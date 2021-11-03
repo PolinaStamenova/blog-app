@@ -1,21 +1,41 @@
-<main>
  <div>
-    <img>
+  <%= image_tag @user.photo %>
     <div>
-      <h1>Here will be the name of the current user</h1>
-      <p>Here will be number of posts of the current user</p>
+      <p><%= @user.name %></p>
+      <p>Number of posts:<%= @user.posts.size %></p>
     </div>
   </div>
   <div>
     <p>Bio</p>
-    <p>Lorem ipsum dolor sit amet. Id possimus molestias et quam enim vel   recusandae deleniti vel fuga sapiente At dignissimos consequatur sed blanditiis iure. Sed quae similique id dolores consequatur et nisi repellendus qui assumenda nisi et consequatur reiciendis ut beatae dolore est eaque tempore.</p>
+    <p><%= @user.bio%></p>
   </div>
     <ul>
+    <% @user.recent_posts.each do |post|%>
     <li>
-        <h1>Post # here will be the id of the post</h1>
-        <p>Here will be the post message</p>
-        <p>Comments: x, Likes: y</p>
+      <p>Post #<%= @user.posts_counter %></p>
+      <p><%= post.text%></p>
+      <div>
+        <% if post.comments_counter == nil %>
+          <p>Comments: 0</p>
+        <% else %>
+          <p>Comments: <%= post.comments_counter %></p>
+        <% end %>
+        <% if post.likes_counter == nil %>
+          <p>Likes: 0</p>
+        <% else %>
+          <p>Likes: <%= post.likes_counter %></p>
+        <% end %>
+      </div>
     </li>
+    <% end %>
   </ul>
-  <button>See all posts</button>
-</main>
+
+<%# <%= button_tag 'See all posts' %>
+<%# <%= link_to @user.posts, user_posts_path(@user) %>
+<%= link_to "See all post", user_posts_path(@user.id)%>
+
+
+
+
+
+
