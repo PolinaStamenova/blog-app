@@ -1,14 +1,14 @@
 <%= render  @user%>
-  <div>
+  <div class = "bio">
     <p>Bio</p>
     <p><%= @user.bio%></p>
   </div>
     <ul>
     <% @user.recent_posts.each do |post|%>
-    <li>
+    <li class="list-posts">
       <p>Post #<%= @user.posts_counter %></p>
       <p><%= post.text%></p>
-      <div>
+      <div class= 'comments-likes'>
         <% if post.comments_counter == nil %>
           <p>Comments: 0</p>
         <% else %>
@@ -26,7 +26,7 @@
 
 <%# <%= button_tag 'See all posts' %>
 <%# <%= link_to @user.posts, user_posts_path(@user) %>
-<%= link_to "See all post", user_posts_path(@user.id)%>
+<p class="btn"><%= link_to "See all post", user_posts_path(@user.id)%></p>
 
 
 

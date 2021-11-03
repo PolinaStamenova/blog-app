@@ -1,6 +1,6 @@
-<div>
-  <h1>Post #1 by <%= @post.user.name %></h1>
-  <div>
+<div class = 'post-by-id'>
+  <p>Post #1 by <%= @post.user.name %></p>
+  <div class = "comments-likes ">
     <% if @post.comments_counter == nil %>
       <p>Comments: 0</p>
     <% else %>
@@ -12,10 +12,10 @@
       <p>Likes: <%= @post.likes_counter %></p>
     <% end %>
   </div>
-  <p><%= @post.text %></p>
+  <p class = 'post-by-id-post'><%= @post.text %></p>
 </div>
 <div>
-  <ul>
+  <ul class="list-comments" >
   <% @post.comments.each do |comment| %>
     <li>
         <%= comment.user.name %>:
