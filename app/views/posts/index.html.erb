@@ -1,10 +1,4 @@
-<div>
-  <%= image_tag @user.photo %>
-  <div>
-    <p><%= @user.name %></p>
-    <p>Number of posts: <%= @user.posts.size %></p>
-  </div>
-</div>
+<%= render  @user%>
 <ul>
 <% @posts.each do |post|%>
   <div>
