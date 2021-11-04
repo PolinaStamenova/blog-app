@@ -10,6 +10,9 @@ polina = User.create(name:"Polina", photo: "https://avatarfiles.alphacoders.com/
 
 polina_post_one = Post.create(title: "My first post", text: "This is my first post that i want to share with you!", user:polina)
 polina_post_two = Post.create(title: "My second post", text: "This is my second post that i want to share with you!", user:polina)
+polina_post_three = Post.create(title: "My third post", text: "This is my third post that i want to share with you!", user:polina)
+polina_post_four = Post.create(title: "My fourth post", text: "This is my fourth post that i want to share with you!", user:polina)
+
 
 polina_comment_one = Comment.create(text: "My first comment", user:polina, post: polina_post_one)
 polina_comment_two= Comment.create(text: "My second comment", user:polina, post: polina_post_two)
@@ -24,6 +27,8 @@ marina = User.create(name:"Marina", photo: "http://www.pselaw.com/wp-content/upl
 
 marina_post_one = Post.create(title: "My first post", text: "This is my first post that i want to share with you!", user: marina)
 marina_post_two = Post.create(title: "My second post", text: "This is my second post that i want to share with you!", user: marina)
+marina_post_three = Post.create(title: "My third post", text: "This is my third post that i want to share with you!", user:marina)
+marina_post_four = Post.create(title: "My fourth post", text: "This is my fourth post that i want to share with you!", user:marina)
 
 marina_comment_one = Comment.create(text: "My first comment", user:marina, post: marina_post_one)
 marina_comment_two= Comment.create(text: "My second comment", user:marina, post: marina_post_two)
@@ -34,7 +39,7 @@ marina_like_one = Like.create(user:marina, post: marina_post_one)
 marina_like_two = Like.create(user:marina, post: marina_post_two)
 
 
-tom = User.create(name:"tom", photo: "https://www.qttoyslondon.com/wp-content/uploads/2021/01/pokemon-45inch-battle-figure-gengar-150x150.jpg", bio: "I am Tom, I am passionate about programming. In my free time, I like free-diving, climbing and enjoy the sun.")
+tom = User.create(name:"Tom", photo: "https://www.qttoyslondon.com/wp-content/uploads/2021/01/pokemon-45inch-battle-figure-gengar-150x150.jpg", bio: "I am Tom, I am passionate about programming. In my free time, I like free-diving, climbing and enjoy the sun.")
 
 tom_post_one = Post.create(title: "My first post", text: "This is my first post that i want to share with you!", user: tom)
 tom_post_two = Post.create(title: "My second post", text: "This is my second post that i want to share with you!", user: tom)

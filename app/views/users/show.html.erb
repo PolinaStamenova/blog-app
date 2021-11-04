@@ -24,9 +24,9 @@
     <% end %>
   </ul>
 
-<%# <%= button_tag 'See all posts' %>
-<%# <%= link_to @user.posts, user_posts_path(@user) %>
-<p class="btn"><%= link_to "See all post", user_posts_path(@user.id)%></p>
+<button class='btn'>
+<%= link_to "See all posts", user_posts_path(@user) %>
+</button>
 
 
 
