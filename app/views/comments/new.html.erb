@@ -1,4 +1,4 @@
-<%= form_with model:[ @user, @user.posts.build], class: "form" do |f|%>
+<%= form_with model: @comment, class: "form" do |f|%>
   <%= f.label :text %>
   <%= f.text_field :text, class: 'form-text-area' %>
   <%= f.submit "Post comment" %>

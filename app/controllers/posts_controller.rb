@@ -12,8 +12,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    # @post = Post.new(user_id: @user.id)
-    # @post = current_user.posts.build
     @user = current_user
   end
 
