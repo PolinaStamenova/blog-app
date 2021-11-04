@@ -4,9 +4,9 @@
   <p><%= @user.bio%></p>
 </div>
   <ul>
-  <% @user.recent_posts.each do |post|%>
+  <% @user.recent_posts.each_with_index do |post, i|%>
   <li class="list-posts">
-    <p>Post #<%= @user.posts_counter %></p>
+    <p>Post #<%= i + 1 %> </p>
     <p><%= post.text%></p>
     <div class= 'comments-likes'>
       <p>Comments: <%= post.comments_counter.to_i %></p>

@@ -1,5 +1,5 @@
 <div class = 'post-by-id'>
-  <p>Post #1 by <%= @post.user.name %></p>
+  <p>Post #<%= @posts.find_index(@post) +1 %> by <%= @post.user.name %></p>
   <div class = "comments-likes ">
     <p>Comments: <%= @post.comments_counter.to_i %></p>
     <p>Likes: <%= @post.likes_counter.to_i %></p>
@@ -13,6 +13,6 @@
         <%= comment.user.name %>:
         <%= comment.text %>
       </li>
-    <% end %>
+  <% end %>
   </ul>
 </div>
