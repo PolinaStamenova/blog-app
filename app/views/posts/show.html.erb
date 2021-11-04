@@ -1,30 +1,18 @@
 <div class = 'post-by-id'>
   <p>Post #1 by <%= @post.user.name %></p>
   <div class = "comments-likes ">
-    <% if @post.comments_counter == nil %>
-      <p>Comments: 0</p>
-    <% else %>
-      <p>Comments: <%= @post.comments_counter %></p>
-    <% end %>
-    <% if @post.likes_counter == nil %>
-      <p>Likes: 0</p>
-    <% else %>
-      <p>Likes: <%= @post.likes_counter %></p>
-    <% end %>
+    <p>Comments: <%= @post.comments_counter.to_i %></p>
+    <p>Likes: <%= @post.likes_counter.to_i %></p>
   </div>
   <p class = 'post-by-id-post'><%= @post.text %></p>
 </div>
 <div>
-<% if @post.comments.exists? %>
-    <ul class="list-comments">
-  <% else %>
-    <ul class="no-list-comments">
-  <% end %>
-  <% @post.comments.each do |comment| %>
-    <li>
+  <ul class="<%= comments?(@post)%>">
+    <% @post.comments.each do |comment| %>
+      <li>
         <%= comment.user.name %>:
         <%= comment.text %>
-    </li>
-  <% end %>
+      </li>
+    <% end %>
   </ul>
 </div>

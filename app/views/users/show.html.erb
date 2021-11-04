@@ -1,29 +1,20 @@
 <%= render  @user%>
-  <div class = "bio">
-    <p>Bio</p>
-    <p><%= @user.bio%></p>
-  </div>
-    <ul>
-    <% @user.recent_posts.each do |post|%>
-    <li class="list-posts">
-      <p>Post #<%= @user.posts_counter %></p>
-      <p><%= post.text%></p>
-      <div class= 'comments-likes'>
-        <% if post.comments_counter == nil %>
-          <p>Comments: 0</p>
-        <% else %>
-          <p>Comments: <%= post.comments_counter %></p>
-        <% end %>
-        <% if post.likes_counter == nil %>
-          <p>Likes: 0</p>
-        <% else %>
-          <p>Likes: <%= post.likes_counter %></p>
-        <% end %>
-      </div>
-    </li>
-    <% end %>
-  </ul>
-
+<div class = "bio">
+  <p>Bio</p>
+  <p><%= @user.bio%></p>
+</div>
+  <ul>
+  <% @user.recent_posts.each do |post|%>
+  <li class="list-posts">
+    <p>Post #<%= @user.posts_counter %></p>
+    <p><%= post.text%></p>
+    <div class= 'comments-likes'>
+      <p>Comments: <%= post.comments_counter.to_i %></p>
+      <p>Likes: <%= post.likes_counter.to_i %></p>
+    </div>
+  </li>
+  <% end %>
+</ul>
 <button class='btn'>
 <%= link_to "See all posts", user_posts_path(@user) %>
 </button>
