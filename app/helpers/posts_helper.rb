@@ -1,7 +1,7 @@
 module PostsHelper
   def comments?(post)
-    return "list-comments" if post.comments.exists?
+    return 'list-comments' if post.comments.exists?
 
-    "no-list-comments"
+    'no-list-comments'
   end
 end
