@@ -22,7 +22,11 @@
     </li>
   </div>
   <div>
+  <% if post.comments.exists? %>
     <ul class="list-comments">
+  <% else %>
+    <ul class="no-list-comments">
+  <% end %>
     <% post.comments.each do |comment| %>
       <li>
           <p><%= comment.user.name %>: <%= comment.text %> </p>

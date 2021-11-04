@@ -83,6 +83,7 @@ ul {
   padding: 0.5rem;
   margin-top: 3rem;
   margin-left: 50%;
+  margin-bottom: 3rem;
 }
 
 a {
@@ -98,6 +99,10 @@ a {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
+}
+
+.no-.list-comments {
+  display: none;
 }
 
 .post-by-id {

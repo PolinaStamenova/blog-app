@@ -15,7 +15,11 @@
   <p class = 'post-by-id-post'><%= @post.text %></p>
 </div>
 <div>
-  <ul class="list-comments" >
+<% if @post.comments.exists? %>
+    <ul class="list-comments">
+  <% else %>
+    <ul class="no-list-comments">
+  <% end %>
   <% @post.comments.each do |comment| %>
     <li>
         <%= comment.user.name %>:
