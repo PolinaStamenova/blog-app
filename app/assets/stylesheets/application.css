@@ -139,3 +139,26 @@ a {
 .form-text-area {
   padding: 0.5rem;
 }
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.two-btns {
+  padding: 0.5rem;
+}
+
+.back-btn {
+  padding: 0.5rem;
+  margin-top: 3rem;
+}
+
+.back-btn-holder {
+  width: 100%;
+  text-align: center;
+}

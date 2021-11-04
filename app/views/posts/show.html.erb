@@ -17,9 +17,13 @@
   </ul>
 </div>
 
-<div>
-<%= link_to 'back', root_path %>
-<%= link_to "Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id) %>
+<div class = "buttons">
+  <button class = "two-btns">
+  <%= link_to 'Back', root_path %>
+  </button>
+  <button class = "two-btns">
+  <%= link_to "Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id) %>
+  </button>
 </div>
 
 
