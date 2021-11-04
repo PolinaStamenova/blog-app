@@ -1,0 +1,2 @@
+module LiksHelper
+end
