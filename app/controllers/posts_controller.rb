@@ -1,3 +1,4 @@
+
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
@@ -8,5 +9,26 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = @user.posts
     @post = Post.find(params[:id])
+  end
+
+  def new
+    # @post = Post.new(user_id: @user.id)
+    # @post = current_user.posts.build
+    @user = current_user
+  end
+
+  def create
+    @post = current_user.posts.build(post_params)
+    if @post.save
+      redirect_to user_post_path(user_id: @post.user_id, id: @post.id)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
