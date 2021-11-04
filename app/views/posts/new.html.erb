@@ -1,0 +1,10 @@
+<%= form_with model:[ @user, @user.posts.build], class: "form" do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-title' %>
+  <%= f.label :text %>
+  <%= f.text_field :text, class: 'form-text-area' %>
+  <%= f.submit "Post" %>
+<% end %>
+
+<%= link_to 'back', root_path%>
+
