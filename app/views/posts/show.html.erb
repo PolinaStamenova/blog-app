@@ -22,7 +22,7 @@
   <%= link_to 'Back', root_path %>
   </button>
   <button class = "two-btns">
-  <%= link_to "Comment", new_user_post_path(user_id: @user.id, post_id: @post.id) %>
+  <%= link_to "Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id) %>
   </button>
 </div>
 
