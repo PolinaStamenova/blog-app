@@ -1,9 +1,11 @@
 <div class= "main-ul">
   <div class = main-list >
-  <%= image_tag @user.photo %>
-    <div>
-      <p><%= @user.name %></p>
-      <p>Number of posts:<%= @user.posts.size %></p>
+    <div class="photo">
+      <%= image_tag @user.photo %>
     </div>
-  </div>
+      <div class="main-div-list">
+        <p><%= @user.name %></p>
+        <p>Number of posts:<%= @user.posts.size %></p>
+      </div>
+    </div>
 </div>

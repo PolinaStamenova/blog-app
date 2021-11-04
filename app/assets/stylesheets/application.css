@@ -37,14 +37,18 @@ ul {
 .main-list {
   display: flex;
   align-items: center;
-  border: 1px solid black;
-  padding: 0 2rem;
+  gap: 2rem;
 }
 
 .main-div-list {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  border: 1px solid black;
+  height: 156px;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
 }
 
 .bio {
@@ -107,4 +111,8 @@ a {
 
 .post-by-id-post {
   margin-top: 1rem;
+}
+
+.photo {
+  border: 1px solid black;
 }
