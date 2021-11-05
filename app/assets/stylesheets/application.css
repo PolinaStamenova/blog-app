@@ -162,3 +162,8 @@ a {
   width: 100%;
   text-align: center;
 }
+
+.comment-like-btn {
+  display: flex;
+  gap: 2rem;
+}
