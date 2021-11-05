@@ -9,8 +9,8 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = @user.posts
     @post = Post.find(params[:id])
-    @comment = @post.comments.new
-    @comment.post_id = @post.id
+    # @comment = @post.comments.new
+    # @comment.post_id = @post.id
   end
 
   def new
