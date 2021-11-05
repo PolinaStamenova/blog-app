@@ -164,6 +164,14 @@ a {
 }
 
 .comment-like-btn {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like-btn {
+  margin-top: 2rem;
 }
