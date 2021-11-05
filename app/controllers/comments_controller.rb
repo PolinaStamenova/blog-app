@@ -6,7 +6,6 @@ class CommentsController < ApplicationController
 
 
    if @comment.save
-    redirect_to
       redirect_to user_post_path(user_id: @post.user.id, post_id: @post.id)
       # redirect_to root_path
    else
