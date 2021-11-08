@@ -20,11 +20,6 @@
   box-sizing: border-box;
 }
 
-.flash-msg {
-  margin-top: 3rem;
-  margin-left: 1rem;
-}
-
 ul {
   list-style: none;
 }
@@ -183,7 +178,20 @@ a {
   margin-top: 2rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: gainsboro;
+}
+
+.flash-msg {
+  font-size: 18px;
+  color: grey;
+}
+
 .nav-bar {
   display: flex;
   gap: 1rem;
+  font-size: 20px;
 }
