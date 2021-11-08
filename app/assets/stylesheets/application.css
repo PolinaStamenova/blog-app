@@ -20,6 +20,11 @@
   box-sizing: border-box;
 }
 
+.flash-msg {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
 ul {
   list-style: none;
 }
