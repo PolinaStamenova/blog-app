@@ -125,6 +125,8 @@ a {
 
 .photo {
   border: 1px solid black;
+  width: 150px;
+  height: 156px;
 }
 
 .form {
@@ -179,4 +181,9 @@ a {
 
 .like-btn {
   margin-top: 2rem;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 1rem;
 }
