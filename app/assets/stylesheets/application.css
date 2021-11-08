@@ -195,3 +195,21 @@ header {
   gap: 1rem;
   font-size: 20px;
 }
+
+.log-in {
+  margin-top: 1rem;
+}
+
+.field {
+  padding: 0.5rem;
+}
+
+.actions {
+  padding: 1rem;
+}
+
+.sign-share {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
