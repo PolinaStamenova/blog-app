@@ -37,7 +37,7 @@ RSpec.describe User, type: :feature do
         end
 
         it 'should get detailed error' do
-          fill_in 'user_email', with: @user.email   # I use 'user_email instead Email, because i do NOT have id = 'Email, after installing device. Because my devise Model is User  => 'user_email' Same for password!
+          fill_in 'user_email', with: @user.email # I use 'user_email instead Email, because i do NOT have id = 'Email, after installing device. Because my devise Model is User  => 'user_email' Same for password!
           fill_in 'user_password', with: @user.password
           click_button 'Log in'
           expect(page).to have_content("Signed in successfully")
