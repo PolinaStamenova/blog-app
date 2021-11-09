@@ -7,6 +7,11 @@
   </div>
   <div class = "text-like-wrapper">
       <p class = 'post-by-id-post'><%= @post.text %></p>
+        <% if can? :destroy,  @post %>
+          <button>
+            <%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+          </button>
+        <%end%>
       <%= render partial: 'likes/form' %>
   </div>
 </div>
