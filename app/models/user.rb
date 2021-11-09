@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   after_create :set_default_role
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -19,6 +18,6 @@ class User < ApplicationRecord
   private
 
   def set_default_role
-    self.update(role: "user")
+    update(role: 'user')
   end
 end
