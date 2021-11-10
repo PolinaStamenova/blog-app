@@ -22,7 +22,7 @@ RSpec.configure do |config|
   # assertions if you prefer.
 
   config.include Devise::Test::ControllerHelpers, type: :view
-
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
