@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe "User show", type: :feature do
+RSpec.describe "User view", type: :feature do
   include Devise::Test::IntegrationHelpers
-  describe "User" do
+  describe "User show page" do
     let(:user) { User.create(name: "Polina", email: 'polina@example.com', password: 'password') }
 
     before do
