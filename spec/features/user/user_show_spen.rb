@@ -13,7 +13,6 @@ RSpec.describe "User show", type: :feature do
       visit user_path(@user_one)
     end
 
-
     # it "should be able see profile picture for each user" do
     #   # expect(page).to have_selector("img[src=testimonial-avatar-150x150]")
     #   # expect(find('img').each { |img| img[:src] == 'https://avatarfiles.alphacoders.com/892/89214.gif' }).to be_truthy
@@ -31,9 +30,18 @@ RSpec.describe "User show", type: :feature do
       expect(page).to have_content("This is my bio.")
     end
 
-    # it "should redirected to that user's show page, when click on a user" do
+    it "should see a button that lets me view all of a user's posts." do
+      expect(page).to have_content("See all posts")
+    end
+
+    # it "should redirects me to that post's show page, when click on a user`s" do
     #   find_link("user_#{@user_one.id}").click
     #   expect(current_path).to eq(user_path(@user_one.id))
     # end
+
+    it "should redirects me to the user's post's index page, when click on a see all posts button" do
+      find_link("see_all_#{@user_one.id}").click
+      expect(current_path).to eq(user_posts_path(@user_one.id))
+    end
   end
 end
