@@ -1,5 +1,5 @@
 require 'rails_helper'
- 
+
 RSpec.describe 'Post view', type: :feature do
   include Devise::Test::IntegrationHelpers
   describe 'Post index' do
@@ -43,26 +43,26 @@ RSpec.describe 'Post view', type: :feature do
         sign_in user
         visit user_posts_path(user)
       end
- 
+
       it 'display the first three comments on the post.' do
         expect(page).not_to have_content('Comment one')
         expect(page).to have_content('Comment two')
         expect(page).to have_content('Comment three')
         expect(page).to have_content('Comment four')
       end
- 
+
       it 'display how many comments a post has.' do
         expect(page).to have_content("Comments: #{post.comments_counter}")
       end
- 
+
       it 'display how many likes a post has.' do
         expect(page).to have_content("Likes: #{post.likes_counter}")
       end
- 
+
       it 'display pagination button.' do
         expect(page).to have_selector 'button', text: 'Pagination'
       end
- 
+
       it "should redirected to that user's show page, when click on a user" do
         find_link("redirect_post_#{post.id}").click
         expect(current_path).to eq(user_post_path(user.id, post.id))
