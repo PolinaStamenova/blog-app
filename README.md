@@ -1,24 +1,81 @@
-# README
+# Blog:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Classic blog website
 
-Things you may want to cover:
+![screenshot](./blog.JPG)
 
-* Ruby version
+## Description:
 
-* System dependencies
+Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby on Rails
+- PostgreSQL
 
-* Database initialization
+[Heroku](https://pure-retreat-86553.herokuapp.com/users/sign_in)
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+## Instructions
 
-* ...
+```
+$ cd <folder>
+```
+
+```
+$ git clone git@github.com:PolinaStamenova/my-blog.git
+```
+
+```
+$ cd school-library
+```
+
+## Install
+
+```
+$ bundle install
+```
+
+## Run
+
+```
+$ rails db:migrate
+```
+
+```
+$ rails db:seed
+```
+
+```
+$ rails s
+```
+
+## Test
+
+```
+  rspec spec
+```
+
+## Authors
+
+👤 **Polina Stamenova**
+
+- GitHub: [@githubhandle](https://github.com/PolinaStamenova)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/polina-stamenova-a60766112/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/PolinaStamenova/my-blog/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
