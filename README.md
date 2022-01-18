@@ -2,6 +2,8 @@
 
 Classic blog website
 
+![screenshot](./blog.JPG)
+
 ## Description:
 
 Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
@@ -77,7 +79,3 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-
-```
-
-```
