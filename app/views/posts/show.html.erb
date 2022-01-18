@@ -1,0 +1,42 @@
+
+<div class = 'post-by-id'>
+  <p>Post #<%= @post.title %> by <%= @post.user.name %></p>
+  <div class = "comments-likes ">
+    <p>Comments: <%= @post.comments_counter.to_i %></p>
+    <p>Likes: <%= @post.likes_counter.to_i %></p>
+  </div>
+  <div class = "text-like-wrapper">
+      <p class = 'post-by-id-post'><%= @post.text %></p>
+        <% if can? :destroy,  @post %>
+          <button>
+            <%= link_to "Delete Post", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+          </button>
+        <%end%>
+      <%= render partial: 'likes/form' %>
+  </div>
+</div>
+<div>
+  <ul class="<%= comments?(@post)%>">
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= comment.user.name %>:
+        <%= comment.text %>
+      <% if can? :destroy,  comment %>
+        <button>
+          <%= link_to "Delete", comment_path(comment), method: :delete, data: { confirm: "Are you sure?" } %>
+        </button>
+      <%end%>
+      </li>
+  <% end %>
+  </ul>
+</div>
+
+<div class = "comment-like-btn">
+  <%= render partial: 'comments/form' %>
+</div>
+
+<div class = "back-btn-holder">
+  <button class = "back-btn">
+  <%= link_to 'Back', root_path%>
+  </button>
+</div>

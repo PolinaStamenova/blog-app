@@ -1,24 +1,81 @@
-# README
+# Blog:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Classic blog website
 
-Things you may want to cover:
+![screenshot](./blog.JPG)
 
-* Ruby version
+## Description:
 
-* System dependencies
+Blog website that shows a list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby on Rails
+- PostgreSQL
 
-* Database initialization
+## Getting Started
 
-* How to run the test suite
+To get a local copy up and running follow these simple example steps.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Instructions
 
-* Deployment instructions
+```
+$ cd <folder>
+```
 
-* ...
+```
+$ git clone git@github.com:PolinaStamenova/my-blog.git
+```
+
+```
+$ cd school-library
+```
+
+## Install
+
+```
+$ bundle install
+```
+
+## Run
+
+```
+$ rails db:seed
+```
+
+```
+$ rails db:migrate
+```
+
+## Test
+
+```
+  rspec spec
+```
+
+### Usage
+
+```
+$ ruby main.rb
+```
+
+## Authors
+
+👤 **Polina Stamenova**
+
+- GitHub: [@githubhandle](https://github.com/PolinaStamenova)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/polina-stamenova-a60766112/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/PolinaStamenova/my-blog/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse

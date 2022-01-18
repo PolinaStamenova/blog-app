@@ -9,12 +9,10 @@ development:
   host: localhost
   username: stamenova
   password: stamenova123
-# test:
-#   <<: *default
-#   database: my_blog_db
 
-# production:
-#   <<: *default
-#   database: my_blog_db
-#   username: stamenova
-#   password: stamenova123
+test:
+  <<: *default
+  database: my_blog_db
+  host: localhost
+  username: stamenova
+  password: stamenova123

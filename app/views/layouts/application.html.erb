@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <header>
+      <div class = 'flash-msg'>
+        <% flash.each do |type, msg| %>
+          <%= msg %>
+        <% end %>
+      </div>
+      <div class = "sign-nav">
+        <%= render partial: 'shared/header'%>
+        <p class = "role">
+          <% if current_user != nil%>
+            <%= current_user.name.capitalize%>
+          <% end %>
+        </p>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
