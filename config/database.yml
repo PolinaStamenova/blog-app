@@ -16,8 +16,3 @@ test:
   host: localhost
   username: stamenova
   password: stamenova123
-# production:
-#   <<: *default
-#   database: my_blog_db
-#   username: stamenova
-#   password: stamenova123
